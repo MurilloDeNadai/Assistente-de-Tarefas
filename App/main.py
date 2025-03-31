@@ -1,6 +1,7 @@
 from database import db, Tarefas
 from os import system
 import datetime as dt
+from winotify import Notification, audio
 
 try:
     db.connect()
@@ -84,7 +85,7 @@ class App():
 
         Tarefas.create(nome=nome, descricao=descricao, prazo=prazo, view=view, check=check, horario=horas, data=data)
 
-        input("Task adicionada com sucesso!")
+        App.notificacao(titulo="Tarefa adicionada com sucesso!", mensagem="Não deixe de fazer a sua tarefa, isso pode acabar atrasando a sua vida depois.")
 
         App.menu()
 
@@ -99,7 +100,7 @@ class App():
         marcarTask.check = True
         marcarTask.save()
         
-        input("Task marcada com sucesso!")
+        App.notificacao(titulo="Tarefa realizada com sucesso!", mensagem="Parabéns, você concluiu a sua tarefa, estou tão orgulhoso. Agora você está uma passo mais próximo de concluir o seu objetivo.")
 
         App.menu()
 
@@ -114,9 +115,16 @@ class App():
         deletarTask.view = False
         deletarTask.save()
 
-        input("Task deletada com sucesso!")
+        App.notificacao(titulo="Tarefa deletada com sucesso!", mensagem="As vezes não conseguimos concluir alguns projetos, isso é normal, apenas continue e se dedique ao máximo.")
 
         App.menu()
 
+    def notificacao(titulo, mensagem, duracao="short"):
+        notif = Notification(app_id="Assistente de Tarefas", title=titulo, msg=mensagem, duration=duracao, icon=r"C:\Users\muril\OneDrive\Documentos\Meus Projetos\Assistente-de-Tarefas\image\check.png")
+        notif.set_audio(audio.Mail, loop=False)
+
+        notif.show()
+
 
 App.menu()
+
