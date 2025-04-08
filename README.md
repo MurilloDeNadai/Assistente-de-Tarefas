@@ -17,3 +17,6 @@ Um aplicativo intuitivo e eficiente para gerenciamento de tarefas diárias. Com 
 - [Banco de dados: SQLite]
 
 - [Bibliotecas: Flet, Winotfy, Peewee]
+
+Youtube: https://www.youtube.com/@hifenDEV
+Linkedin: https://www.linkedin.com/in/murillo-nadai/
