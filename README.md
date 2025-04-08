@@ -1,9 +1,17 @@
 # Assistente de Tarefas
 
-Um assitente para suas tarefas diárias.
+[AINDA EM DESENVOLVIMENTO]
 
-Um assitente para suas tarefas diárias.
+Um aplicativo intuitivo e eficiente para gerenciamento de tarefas diárias. Com uma interface simples e funcional, ele ajuda você a organizar sua rotina, aumentar sua produtividade e nunca mais esquecer o que precisa ser feito.
 
-Ainda estou desenvolvendo, pretendo adicionar novas features que vão complementar ainda mais o projeto.
+✨ Funcionalidades
+✅(Funcionando): Adição, Notificações
 
-No momento, apenas os sistemas de visualizar, adicionar, marcar e deletar estão disponíveis.
+    ❌(Em desenvolvimento): edição e remoção de tarefas, Modo claro e escuro, Lembretes
+
+🚀 Tecnologias Utilizadas
+[Linguagem: Python]
+
+    [Banco de dados: SQLite]
+
+    [Bibliotecas: Flet, Winotfy, Peewee]
