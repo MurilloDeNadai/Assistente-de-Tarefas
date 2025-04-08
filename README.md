@@ -1,5 +1,3 @@
-@@ -1,2 +1,7 @@
-
 # Assistente de Tarefas
 
 Um assitente para suas tarefas diárias.
